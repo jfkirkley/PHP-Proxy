@@ -1,0 +1,22 @@
+This is a simple PHP proxy that can be dropped into your web servers 
+document root and be ready to go.   There are only two requirements:
+
+1) The script must have write permissions in document root.
+2) The name of the script must remain 'proxy.php'.
+(allowing the script to be placed anywhere and renamed is on my todo list)
+
+Now run the script by using with the following parameters:
+
+__target_host=<url of the target host with out path>
+__target_path=<the path of the url>
+
+
+for example:
+
+http://localhost/proxy.php?__target_host=http://www.devoxx.com&__target_path=/display/Devoxx2K10/Home
+
+
+
+This is the alpha version.  It works fairly well on basic sites, but
+will fall down when it encounters dynamic content, as it does not
+handle javascript generated urls.   
